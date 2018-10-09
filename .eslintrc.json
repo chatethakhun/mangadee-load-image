@@ -11,9 +11,9 @@
   "rules": {
     "no-console": 0,
     "no-unused-vars": 2,
-    "indent": ["error", 4],
+    "indent": 2,
     "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single"],
+    "quotes": 2,
     "semi": ["error", "never"]
   }
 }
