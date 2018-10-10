@@ -18,6 +18,7 @@ import bodyParser from "body-parser"
 const app = express()
 const port = 3000
 const dir = "./image/"
+const pdfDir = "./pdf"
 
 app.use(bodyParser.json()) // to support JSON-encoded bodies
 app.use(
@@ -53,6 +54,9 @@ app.post("/download-manga", (req, res) => {
         if (!existsSync(dir)) {
             mkdirSync(dir)
         }
+        if (!existsSync(pdfDir)) {
+            mkdirSync(pdfDir)
+        }
         request({ uri }, (error, response, body) => {
             const $ = load(body)
             $(".img-wrapper img").each(async function() {
@@ -77,6 +81,7 @@ app.post("/download-manga", (req, res) => {
                     file => file !== ".DS_Store" && file.indexOf("\n") < 0
                 )
                 filterOtherFile.forEach(filename => {
+                    // add pdf
                     doc.addPage().image(`./image/${filename}`, 0, 0, {
                         scale: 1,
                         width: 520
