@@ -13,7 +13,7 @@
     "no-unused-vars": 2,
     "indent": 2,
     "linebreak-style": ["error", "unix"],
-    "quotes": 2,
-    "semi": ["error", "never"]
+    "quotes": 1,
+    "semi": 1
   }
 }

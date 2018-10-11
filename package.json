@@ -2,9 +2,9 @@
   "name": "auto-load-image",
   "version": "1.0.0",
   "description": "auto load image",
-  "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node --presets env,stage-2 app.js",
+    "start": "concurrently \"nodemon --exec babel-node --presets env,stage-2 ./backend/app.js\" \" react-scripts start\"  ",
+    "front": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chatethakhun khongthon",
@@ -20,6 +20,20 @@
     "image-downloader": "^3.4.1",
     "nodemon": "^1.18.4",
     "pdfkit": "^0.8.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-scripts": "2.0.4",
+    "redux": "^4.0.0",
     "request": "^2.88.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "prettier-eslint": "^8.8.2"
   }
 }
