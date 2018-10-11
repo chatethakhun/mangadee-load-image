@@ -20,11 +20,13 @@
     "image-downloader": "^3.4.1",
     "nodemon": "^1.18.4",
     "pdfkit": "^0.8.3",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
     "react-scripts": "2.0.4",
     "redux": "^4.0.0",
+    "redux-promise-middleware": "^5.1.1",
     "request": "^2.88.0"
   },
   "browserslist": [

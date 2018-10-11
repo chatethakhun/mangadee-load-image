@@ -1,9 +1,10 @@
-import { combineReducers, compose, createStore } from "redux";
-import mainReducer from "./reducer/index";
+import { combineReducers, compose, createStore, applyMiddleware } from 'redux'
+import reduxPromiseMiddleware from 'redux-promise-middleware'
+import { mainReducer } from './reducer/index'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 export const store = createStore(
     combineReducers({ mainReducer }),
-    composeEnhancers()
-);
+    composeEnhancers(applyMiddleware(reduxPromiseMiddleware()))
+)
